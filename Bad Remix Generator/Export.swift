@@ -13,7 +13,7 @@ func save(points: Array<CGPoint>, toFilename filename: String) {
     
     var buffer = [UInt8]()
     
-    for point in points {
+    for point in points.shuffled() {
         // x
         buffer.append(0)
         buffer.append(UInt8(point.x))
