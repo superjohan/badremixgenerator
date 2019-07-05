@@ -17,5 +17,8 @@ let minY = (fullSize.height - windowSize.height) / 2.0
 let maxY = minY + windowSize.height
 let center = CGPoint(x: fullSize.width / 2.0, y: fullSize.height / 2.0)
 
-save(points: rectangle(), toFilename: "rect1.bin")
-save(points: rectangle(), toFilename: "rect2.bin")
+save(points: rectangle(), toFilename: "rect.bin")
+save(points: quad(), toFilename: "quad.bin")
+save(points: circle(), toFilename: "circle.bin")
+save(points: triangle(), toFilename: "triangle.bin")
+save(points: equilateralTriangle(), toFilename: "eqtri.bin")
