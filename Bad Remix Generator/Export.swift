@@ -31,12 +31,14 @@ func save(points: Array<CGPoint>, toFilename filename: String) {
         addPoint(point)
     }
     
-    while buffer.count < (charCount * 8) {
+    let byteCount = charCount * 8
+    
+    while buffer.count < byteCount {
         print("fixing a whoopsie daisy")
         
         addPoint(points.randomElement()!)
     }
     
-    let data = Data(bytes: buffer, count: buffer.count)
+    let data = Data(bytes: buffer, count: byteCount)
     try? data.write(to: URL(fileURLWithPath: "/Users/rm/\(filename)"))
 }
