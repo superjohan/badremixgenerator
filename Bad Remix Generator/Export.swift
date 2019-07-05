@@ -9,6 +9,8 @@
 import Foundation
 
 func save(points: Array<CGPoint>, toFilename filename: String) {
+    print("points: \(points.count)")
+    
     var buffer = [UInt8]()
     
     for point in points {
