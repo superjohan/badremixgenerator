@@ -25,10 +25,10 @@ func quad(_ point1: CGPoint, _ point2: CGPoint, _ point3: CGPoint, _ point4: CGP
     let p3p4d = hypot(point3.x - point4.x, point3.y - point4.y)
     let p4p1d = hypot(point4.x - point1.x, point4.y - point1.y)
     let totalLength = p1p2d + p2p3d + p3p4d + p4p1d
-    let p1p2charCount = Int((p1p2d / totalLength) * CGFloat(charCount))
-    let p2p3charCount = Int((p2p3d / totalLength) * CGFloat(charCount))
-    let p3p4charCount = Int((p3p4d / totalLength) * CGFloat(charCount))
-    let p4p1charCount = Int((p4p1d / totalLength) * CGFloat(charCount))
+    let p1p2charCount = Int(round((p1p2d / totalLength) * CGFloat(charCount)))
+    let p2p3charCount = Int(round((p2p3d / totalLength) * CGFloat(charCount)))
+    let p3p4charCount = Int(round((p3p4d / totalLength) * CGFloat(charCount)))
+    let p4p1charCount = Int(round((p4p1d / totalLength) * CGFloat(charCount)))
     
     let line1 = line(startPoint: point1, endPoint: point2, count: p1p2charCount)
     let line2 = line(startPoint: point2, endPoint: point3, count: p2p3charCount)
