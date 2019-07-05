@@ -13,13 +13,13 @@ func save(points: Array<CGPoint>, toFilename filename: String) {
     
     var buffer = [UInt8]()
     
-    for point in points.shuffled() {
+    func addPoint(_ point: CGPoint) {
         // x
         buffer.append(0)
         buffer.append(UInt8(point.x))
         buffer.append(0)
         buffer.append(0)
-
+        
         // y
         buffer.append(0)
         buffer.append(UInt8(point.y))
@@ -27,6 +27,16 @@ func save(points: Array<CGPoint>, toFilename filename: String) {
         buffer.append(0)
     }
     
-    let data = Data(bytes: buffer, count: charCount * 8)
+    for point in points.shuffled() {
+        addPoint(point)
+    }
+    
+    while buffer.count < (charCount * 8) {
+        print("fixing a whoopsie daisy")
+        
+        addPoint(points.randomElement()!)
+    }
+    
+    let data = Data(bytes: buffer, count: buffer.count)
     try? data.write(to: URL(fileURLWithPath: "/Users/rm/\(filename)"))
 }
