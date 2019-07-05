@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		90A661C722CFAA820011EE3A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A661C622CFAA820011EE3A /* main.swift */; };
+		90A661D022CFB7FF0011EE3A /* ShapeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A661CF22CFB7FF0011EE3A /* ShapeFunctions.swift */; };
+		90A661D222CFB8370011EE3A /* Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A661D122CFB8370011EE3A /* Export.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		90A661C322CFAA820011EE3A /* Bad Remix Generator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Bad Remix Generator"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90A661C622CFAA820011EE3A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		90A661CF22CFB7FF0011EE3A /* ShapeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeFunctions.swift; sourceTree = "<group>"; };
+		90A661D122CFB8370011EE3A /* Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Export.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				90A661C622CFAA820011EE3A /* main.swift */,
+				90A661CF22CFB7FF0011EE3A /* ShapeFunctions.swift */,
+				90A661D122CFB8370011EE3A /* Export.swift */,
 			);
 			path = "Bad Remix Generator";
 			sourceTree = "<group>";
@@ -120,6 +126,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				90A661C722CFAA820011EE3A /* main.swift in Sources */,
+				90A661D022CFB7FF0011EE3A /* ShapeFunctions.swift in Sources */,
+				90A661D222CFB8370011EE3A /* Export.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
