@@ -19,6 +19,15 @@ func rectangle() -> Array<CGPoint> {
     return quad(point1, point2, point3, point4)
 }
 
+private func quad() -> Array<CGPoint> {
+    let point1 = CGPoint(x: CGFloat.random(in: minX...maxX), y: CGFloat.random(in: minY...maxY))
+    let point2 = CGPoint(x: CGFloat.random(in: minX...maxX), y: CGFloat.random(in: minY...maxY))
+    let point3 = CGPoint(x: CGFloat.random(in: minX...maxX), y: CGFloat.random(in: minY...maxY))
+    let point4 = CGPoint(x: CGFloat.random(in: minX...maxX), y: CGFloat.random(in: minY...maxY))
+
+    return quad(point1, point2, point3, point4)
+}
+
 func quad(_ point1: CGPoint, _ point2: CGPoint, _ point3: CGPoint, _ point4: CGPoint) -> Array<CGPoint> {
     let p1p2d = hypot(point1.x - point2.x, point1.y - point2.y)
     let p2p3d = hypot(point2.x - point3.x, point2.y - point3.y)
