@@ -29,7 +29,7 @@ func quad() -> Array<CGPoint> {
 }
 
 func circle() -> Array<CGPoint> {
-    let radius = CGFloat.random(in: 40...windowSize.width)
+    let radius = CGFloat.random(in: 40...(windowSize.width / 2.0))
     
     var characters = [CGPoint]()
 
