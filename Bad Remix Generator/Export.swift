@@ -25,6 +25,6 @@ func save(points: Array<CGPoint>, toFilename filename: String) {
         buffer.append(0)
     }
     
-    let data = Data(bytes: buffer, count: buffer.count)
+    let data = Data(bytes: buffer, count: charCount * 8)
     try? data.write(to: URL(fileURLWithPath: "/Users/rm/\(filename)"))
 }
