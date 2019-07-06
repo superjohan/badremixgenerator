@@ -8,6 +8,19 @@
 
 import Foundation
 
+func random() -> Array<CGPoint> {
+    var points = [CGPoint]()
+    
+    for _ in 0..<charCount {
+        let x = CGFloat.random(in: minX...maxX)
+        let y = CGFloat.random(in: minY...maxY)
+        
+        points.append(CGPoint(x: x, y: y))
+    }
+    
+    return points
+}
+
 func rectangle() -> Array<CGPoint> {
     let width = CGFloat.random(in: minX...maxX)
     let height = CGFloat.random(in: minY...maxY)
