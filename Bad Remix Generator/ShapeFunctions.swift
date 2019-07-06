@@ -28,7 +28,7 @@ func sine() -> Array<CGPoint> {
         let position = CGFloat(index) / CGFloat(charCount)
         let point = CGPoint(
             x: minX + ((maxX - minX) * position),
-            y: center.y + sin(position) * ((maxY - minY) / 2.0)
+            y: center.y + sin(position * (CGFloat.pi * CGFloat.random(in: 2.0...6.0))) * (((maxY - minY) / 2.0) * CGFloat.random(in: 0.5...1.0))
         )
         
         characters.append(point)
