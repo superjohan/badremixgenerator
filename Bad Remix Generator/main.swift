@@ -24,4 +24,5 @@ for i in 1...10 {
     save(points: triangle(), toFilename: "br-triangle\(i).bin")
     save(points: equilateralTriangle(), toFilename: "br-eqtri\(i).bin")
     save(points: random(), toFilename: "br-random\(i).bin")
+    save(points: sine(), toFilename: "br-sine\(i).bin")
 }

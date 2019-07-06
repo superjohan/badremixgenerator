@@ -21,6 +21,22 @@ func random() -> Array<CGPoint> {
     return points
 }
 
+func sine() -> Array<CGPoint> {
+    var characters = [CGPoint]()
+    
+    for index in 0..<charCount {
+        let position = CGFloat(index) / CGFloat(charCount)
+        let point = CGPoint(
+            x: position,
+            y: center.y + sin(position) * (maxY - minY)
+        )
+        
+        characters.append(point)
+    }
+    
+    return characters
+}
+
 func rectangle() -> Array<CGPoint> {
     let width = CGFloat.random(in: minX...maxX)
     let height = CGFloat.random(in: minY...maxY)
